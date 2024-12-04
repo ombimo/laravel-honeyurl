@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Ombimo\LaravelHoneyurl\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelHoneyurlCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-honeyurl';
 
     public $description = 'My command';
 

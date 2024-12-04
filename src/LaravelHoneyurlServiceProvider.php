@@ -25,7 +25,7 @@ class LaravelHoneyurlServiceProvider extends PackageServiceProvider
     {
         $enable = config('honeyurl.enable');
 
-        if (!$this->app->runningInConsole() && $enable) {
+        if (! $this->app->runningInConsole() && $enable) {
             $kernel = $this->app[Kernel::class];
             $kernel->pushMiddleware(CheckHoneyurl::class);
         }

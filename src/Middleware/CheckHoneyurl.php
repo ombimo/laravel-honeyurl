@@ -24,7 +24,7 @@ class CheckHoneyurl
         }
 
         // Turn the path array into a regex pattern.
-        $honeypot_paths = '/^(' . str_replace(['.', '/'], ['\.', '\/'], implode('|', $honeypot_paths_array)) . ')/i';
+        $honeypot_paths = '/^('.str_replace(['.', '/'], ['\.', '\/'], implode('|', $honeypot_paths_array)).')/i';
 
         // If the user tries to access a honeypot path, fail with the teapot code.
         if (preg_match($honeypot_paths, $request->path())) {
